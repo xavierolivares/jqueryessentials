@@ -1,0 +1,1 @@
+Resource: https://www.linkedin.com/learning/jquery-essential-training-2/
