@@ -7,6 +7,12 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
+            // $('#example p:first').css('color', 'red')
+            // $('#example p:last').css('color', 'red')
+            // $('#example p:even').css('color', 'red')
+            // $('#example .a:first').css('color', 'red')
+            // $('#example .b:even').css('color', 'red')
+            $('#example p:not(p:eq(2))').css('border', '5px solid blue')
         });
     </script>
 </head>
