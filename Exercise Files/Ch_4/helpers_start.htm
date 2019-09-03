@@ -7,6 +7,32 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $(function() {
+
+            let $evtTarget = $('#evtTarget')
+           
+            $(window).resize(fnResize)
+            $evtTarget.one('click', function() {
+                $(this).css({
+                'border-width': '4px',
+                'cursor': 'pointer'
+                })
+            })
+            $evtTarget.hover(highlight, highlight)
+            $evtTarget.click(fnClick)
+            $evtTarget.dblclick(dblClick)
+
+            function highlight() {
+                $evtTarget.toggleClass('highlighted')
+            }
+            function fnClick() {
+                $evtTarget.html('<p>clicked</p>')
+            }
+            function dblClick() {
+                $evtTarget.html('<p>doubley clicked</p>')
+            }
+            function fnResize() {
+                $evtTarget.html('Browser window resized')
+            }
         });
     </script>
     <style type='text/css'>

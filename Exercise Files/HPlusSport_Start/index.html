@@ -20,10 +20,12 @@
       $('.productToggle').append('<input type="checkbox" name="mineral" value="mineral" checked> Mineral Water ')
       $('.productToggle').append('<input type="checkbox" name="protein" value="protein" checked> Protein Bars ')
       
+      //identifies specific input types for click functionality
       let $vitamin = $("input[value='vitamin']");
       let $mineral = $("input[value='mineral']");
       let $protein = $("input[value='protein']");
-
+      
+      //onclick, we will show or hide the <li> parent tag of the h2 tag with relevant product data type
       $vitamin.click(function() {
         if ($vitamin.prop('checked')) {
           $('[data-type=vitamin]').parent().show()
@@ -31,7 +33,6 @@
           $('[data-type=vitamin]').parent().hide()
         }
       })
-
       $mineral.click(function() {
         if ($mineral.prop('checked')) {
           $('[data-type=mineralwater]').parent().show()
@@ -39,7 +40,6 @@
           $('[data-type=mineralwater]').parent().hide()
         }
       })
-
       $protein.click(function() {
         if ($protein.prop('checked')) {
           $('[data-type=proteinbar]').parent().show()
