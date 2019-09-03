@@ -5,6 +5,15 @@
   <title>HPlus Sport</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='../jquery-3.4.1.js'></script>
+  <script>
+    $(document).ready(() => {
+      console.log($('[data-type=vitamin]').css('background', 'green'))
+      $('[data-type=vitamin]').css('background', 'darkgreen')
+      $('[data-type=mineralwater]').css('background', 'blue')
+      $('[data-type=proteinbar]').css('background', 'darkviolet')
+    })
+  </script>
 </head>
 <body>
 
