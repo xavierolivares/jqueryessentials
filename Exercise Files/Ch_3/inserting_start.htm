@@ -7,6 +7,16 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
+            // $('#example p').append('New Content. append');
+            // $('#example p').prepend('New Content. prepend');
+
+            // $('#example p').after('--');
+            // $('#example p').before('**');
+            // $('#example p').before('<p>Hi there, before method</p>');
+            $('<p>Hi there, insertAfter</p>').insertAfter('#example p:first')
+            $('<p>Hi there, insertBefore</p>').insertBefore('#example p:last')
+
+
         });
     </script>
 </head>
