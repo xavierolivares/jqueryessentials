@@ -8,10 +8,12 @@
   <script src='../jquery-3.4.1.js'></script>
   <script>
     $(document).ready(() => {
+      //change color of product highlights based on type
       $('[data-type=vitamin]').css('background', 'darkgreen')
       $('[data-type=mineralwater]').css('background', 'blue')
       $('[data-type=proteinbar]').css('background', 'darkviolet')
 
+      //adding checkbox functionality to display or hide groups of products
       $('.product-list').before("<div class='productToggle'></div>")
       $('.productToggle').append('<h1>Show: </h1>')
       $('.productToggle').append('<input type="checkbox" name="vitamin" value="vitamin" checked> Vitamins ')
