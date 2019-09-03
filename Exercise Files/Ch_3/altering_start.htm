@@ -6,7 +6,21 @@
     <link rel="stylesheet" href="../style.css" />
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
-    $("document").ready(function() {
+    $("document").ready(() => {
+        // $('#example p').wrap(`<div style='color: red;' />`) //wraps each selected element with provided content and styling
+        // $('#example p').wrapAll(`<div style='color: red;' />`)
+        // $('#example p.a, #example p.b').detach()
+        // $('<p>Hi here</p>').replaceAll('#example p[id]')
+    //    $('#example p[id]').replaceWith('<p>replaced with</p>') 
+       $('#example p').replaceWith(replacementFn)
+
+       function replacementFn(){
+           if ($(this).text().indexOf('1') != -1) {
+               return '<p>this is paragrah uno</p>'
+           } else {
+               return this.outerHTML;
+           }
+       }
     });
     </script>
 </head>
