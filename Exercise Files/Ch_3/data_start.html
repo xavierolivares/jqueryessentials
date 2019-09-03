@@ -7,11 +7,17 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script>
         $("document").ready(function() {
+            let $example = $('#example')
+            $('[data-key3]').css('border', '5px solid blue')
             document.getElementById("show").addEventListener("click", function (evt) {
+                alert(JSON.stringify($example.data(), null, '  '))
             });
             document.getElementById("store").addEventListener("click", function (evt) {
+                $example.data('key1', 1234);
+                $example.data('key2', 'Xavier Olivares')
             });
             document.getElementById("remove").addEventListener("click", function (evt) {
+                $example.removeData('key2')
             });
         });
     </script>
