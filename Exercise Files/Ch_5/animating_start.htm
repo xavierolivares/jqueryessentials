@@ -7,13 +7,22 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $(function() {
+            let $div = $('#theDiv')
             $("#right").click(function() {
+                $div.animate({'width': 500,}, 1000)
             });
             $("#text").click(function() {
+                $div.animate({'font-size': 24}, 1000)
             });
             $("#move").click(function() {
+                $div.animate({'left': 500}, 1000, 'linear')
             });
             $("#all").click(function() {
+                $div.animate({
+                    'width': '500px',
+                    'font-size': '+=3em',
+                    'left': '+=500'
+                }, 1000, 'swing')
             });
         });
     </script>
