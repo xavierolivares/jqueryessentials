@@ -49,6 +49,14 @@
       })
 
       //beginning of ch4 chapter challenge
+      $('.product-item').click(function(evt) {
+        let $product = $(evt.target).parent()[0]
+        let $productName = $product.children[1].innerHTML.split(' ').join('%20')
+        let $productId = $('.product-item').data('prod_id')
+        let url = window.location.href.split('index.html').join('')
+        window.location.href = `${url}product.html?prodName=${$productName}&prodID=${$productId}`;
+      }
+      )
     })
   </script>
 </head>
