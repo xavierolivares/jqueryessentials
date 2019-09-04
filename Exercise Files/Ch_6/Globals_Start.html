@@ -14,6 +14,14 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
+            $(document).ajaxStart(()=>console.log('ajax req starts'));
+            $(document).ajaxStop(()=>console.log('ajax req ended'));
+            $(document).ajaxSend((evt, jqXHR, options)=>console.log('about to send req for data'));
+            $(document).ajaxComplete((evt, jqXHR, options)=>console.log('all is finished'));
+            $(document).ajaxError((evt, jqXHR, settings, err)=>console.log('something went wrong ', err));
+            $(document).ajaxSuccess((evt, jqXHR, options)=>console.log('all worked'));
+
+
             getData();
         });
       
